@@ -48,7 +48,7 @@
       
     - 모델링 결과 
     
-     ![overfitting](https://user-images.githubusercontent.com/38423925/95747233-0d8e6280-0cd3-11eb-991a-34ee060c48d8.PNG)
+      - 계속 분석중...
       
       
       
