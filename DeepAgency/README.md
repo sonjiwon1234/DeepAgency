@@ -45,22 +45,29 @@
    - 데이터 모델링 
       - 구현하고자 하는 어플은 input으로 들어온 얼굴이 어느 얼굴과 유사한지를 분석하는 분류 분석의 문제이다. 또한 해당 프로그램을 android환경에서 실행시킬 수 있도록 Neural Network를 이용해 모델링을 하였다. 
       - 자체적으로 설정한 115명의 연예인에 어울리는 광고를 설정하고 해당 연예인의 얼굴들을 input으로 사용하였다. 
-      
+     
     - 모델링 결과 
+      - 모델 분석 결과 overfitting 가능성이 있어 early-stopping으로 이를 방지하였다. 이때의 loss와 accuracy는 각각 0.9481, 0.7569로 나타났다. 
+      
+      ![res](https://user-images.githubusercontent.com/38423925/96971504-2529de80-1550-11eb-91a3-2daeff328247.PNG)
+      
+      - trial and error 방식으로 모델의 hyperparameter를 조절하면서 accuracy를 높였다. 최종적으로 얻은 loss와 accuracy는 각각 0.6382 , 0.8265로 나타났다. 
+      
+      ![res6](https://user-images.githubusercontent.com/38423925/96971508-278c3880-1550-11eb-837a-e56773cfe54f.PNG)
     
-      - 계속 분석중...
-      
-      
-      
       
       
 ## 시스템 구현(Developing)
   - 설계 및 구현
+    - 해당 프로그램을 잘 표현할 수 있는 방법은 핸드폰 어플을 통해 서비스하는 방법이라고 생각하였다. 
     - python으로 작성한 프로그램을 Android Studio를 통해 JAVA 언어로 바꾸어 작성하였다. 또한 작성한 모델을 tensorflow의 TFLiteConverter를 통해 android에서 실행할 수 있도록 바꾸어주었다. 
     
     
 ## 평가 및 전개(Deploying)
  - 문제점 및 아쉬운 점
-   1) 모델링 과정에서 Overfitting 문제로 인하여 정확도를 높일 수 없었다. 이 부분을 해결하기 위해 hyper-parameter최적화 뿐만 아니라 차원을 줄이는 PCA방법이나, 범주 불균형 문제를 해결하는 downsampling, 그리고 outlier를 제거등 다양한 방법을 사용해 보았지만 overfitting 문제를 해결할 수 없었다. 이 부분에 대해서는 좀 더 생각을 해봐야겠다. 
+   1) 해당 프로그램은 특정 계층에만 공감대를 형성할 수 있다. 더 좋은 내용으로 서비스를 하기 위해서는 전 계층에게서 공감대를 형성할 수 있는 방법을 찾아보면 좋겠다. 
    
-   2) 안드로이드 어플을 개발하기 위해 구글의 material design을 참고하였지만 원하는 디자인에 대한 예시가 부족하여 앱 디자인 부분의 완성도가 떨어졌다. 
+   
+## Reference
+ - https://github.com/davidsandberg/facenet
+ - https://github.com/nyoki-mtl/keras-facenet
