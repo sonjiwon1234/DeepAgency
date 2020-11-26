@@ -61,6 +61,7 @@
   - 설계 및 구현
     - 해당 프로그램을 잘 표현할 수 있는 방법은 핸드폰 어플을 통해 서비스하는 방법이라고 생각하였다. 
     - python으로 작성한 프로그램을 Android Studio를 통해 JAVA 언어로 바꾸어 작성하였다. 또한 작성한 모델을 tensorflow의 TFLiteConverter를 통해 android에서 실행할 수 있도록 바꾸어주었다. 
+    - https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000751678 DeepAgency : 나에게 어울리는 광고 찾기 
     
     
 ## 평가 및 전개(Deploying)
